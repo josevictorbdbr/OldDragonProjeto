@@ -86,6 +86,4 @@ def main():
     personagem = Personagem(nome, estiloDist, estiloRaca, distribuidor)
     personagem.exibirFicha()
 
-
-if __name__ == "__main__":
-    main()
+main()
