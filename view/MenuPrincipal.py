@@ -6,10 +6,12 @@ def ExibirMenu():
 
     nome = input("Digite o nome do personagem: ")
 
+    #escolha de raca
     print("Escolha uma raça: (1) Humano / (2) Elfo / (3) Halfling / (4) Anão")
     escolhaRaca = input("Opção: ")
     raca = { "1": "Humano", "2": "Elfo", "3": "Halfling", "4": "Anão" }.get(escolhaRaca, "Humano")
 
+    #escolha de estilo
     print("Escolha o estilo: (1) Clássico | (2) Aventureiro | (3) Heroico")
     escolhaEstilo = input("Opção: ")
     estilo = { "1": "classico", "2": "aventureiro", "3": "heroico" }.get(escolhaEstilo, "classico")
