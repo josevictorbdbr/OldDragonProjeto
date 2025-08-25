@@ -1,5 +1,6 @@
 from models.Personagem import Personagem
 from models.Distribuidor import distribuidorAtributos
+from models.raca import RacaEscolha
 
 def ExibirMenu():
     distribuidor = distribuidorAtributos()
@@ -7,9 +8,8 @@ def ExibirMenu():
     nome = input("Digite o nome do personagem: ")
 
     #escolha de raca
-    print("Escolha uma raça: (1) Humano / (2) Elfo / (3) Halfling / (4) Anão")
-    escolhaRaca = input("Opção: ")
-    raca = { "1": "Humano", "2": "Elfo", "3": "Halfling", "4": "Anão" }.get(escolhaRaca, "Humano")
+    print("Escolha uma raça: (1) Humano / (2) Elfo / (3) Halfling / (4) Anão / (5) Gnomo / (6) Meio-Elfo")
+    raca = RacaEscolha(input("Opção: "))
 
     #escolha de estilo
     print("Escolha o estilo: (1) Clássico | (2) Aventureiro | (3) Heroico")
