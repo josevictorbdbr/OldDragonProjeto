@@ -5,7 +5,7 @@ from models.raca.Gnomo import Gnomo
 from models.raca.Halfling import Halfling
 from models.raca.MeioElfo import MeioElfo
 
-def RacaEscolha(escolha: str):
+def raca_escolha(escolha: str):
         if escolha == "1":
             return Humano()
         elif escolha == "2":

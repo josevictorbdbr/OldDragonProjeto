@@ -1,4 +1,4 @@
-from models.raca.Base import Raca
+from models.raca.RacaBase import Raca
 
 class MeioElfo(Raca):
     def __init__(self):

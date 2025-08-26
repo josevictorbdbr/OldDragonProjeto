@@ -1,5 +1,5 @@
-
 class Atributos:
+
     def __init__(self, forca=0, destreza=0, constituicao=0, inteligencia=0, sabedoria=0, carisma=0):
         self.forca = forca
         self.destreza = destreza

@@ -1,7 +1,6 @@
-from view.MenuPrincipal import ExibirMenu
+from views.MenuPrincipal import exibir_menu
 
 def main():
-    personagem = ExibirMenu()   
-    personagem.exibirFicha()      
-
+    personagem = exibir_menu()   
+    personagem.exibir_ficha()      
 main()
