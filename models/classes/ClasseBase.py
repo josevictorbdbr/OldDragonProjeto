@@ -8,7 +8,7 @@ class Classe:
         self.dado_dv = dado_dv
         self.equipamento = equipamento
         self.habilidades = habilidades
-        self.vida = self.rolar_dados() #Rola dados de vida dependendo da classe selecionada
+        self.vida = self.rolar_dados(dado_dv) #Rola dados de vida dependendo da classe selecionada
 
     def rolar_dados(self, dado_dv):
         return random.randint(1, dado_dv)
