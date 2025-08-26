@@ -1,4 +1,4 @@
-from models.raca.RacaBase import Raca
+from models.racas.RacaBase import Raca
 
 class Gnomo(Raca):
     def __init__(self):
@@ -7,5 +7,5 @@ class Gnomo(Raca):
             movimento= 6, 
             infravisao= 18, 
             alinhamento= "Neutro",
-            habilidades= ["Avaliadores", "Sagazes e Vigorosos", "Restrições"]
+            habilidades= ["Avaliadores", "Sagazes e Vigorosos", "Restriçoes"]
         )

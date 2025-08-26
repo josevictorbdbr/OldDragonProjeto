@@ -1,4 +1,4 @@
-from models.raca.RacaBase import Raca
+from models.racas.RacaBase import Raca
 
 class MeioElfo(Raca):
     def __init__(self):
@@ -7,5 +7,5 @@ class MeioElfo(Raca):
             movimento= 9, 
             infravisao= 9, 
             alinhamento= "Caos",
-            habilidades= ["Aprendizado", "Gracioso e Vigoroso", "Imunidades", "idioma extra"]
+            habilidades= ["Aprendizado", "Gracioso e Vigoroso", "idioma extra","Imunidades"]
         )

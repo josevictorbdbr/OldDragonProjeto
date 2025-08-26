@@ -1,4 +1,4 @@
-from models.raca.RacaBase import Raca
+from models.racas.RacaBase import Raca
 
 class Halfling(Raca):
     def __init__(self):
@@ -7,5 +7,5 @@ class Halfling(Raca):
             movimento= 6, 
             infravisao= 0, 
             alinhamento= "Neutro",
-            habilidades= [" Destemidos", "Bons de Mira", "Pequenos", "Restrições"]
+            habilidades= [" Destemidos", "Bons de Mira", "Pequenos", "Furtivo", "Restriçoes"]
         )

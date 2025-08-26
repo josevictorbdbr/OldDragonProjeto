@@ -1,12 +1,12 @@
 from models.Atributos import Atributos
 
-
 class Personagem:
-
-    def __init__(self, nome, estilo_dist, raca, distribuidor):
+    
+    def __init__(self, nome, estilo_dist, raca, classe, distribuidor):
         self.nome = nome
         self.estilo_dist = estilo_dist
         self.raca = raca
+        self.classe = classe
         self.atributos = self.definir_atributos(distribuidor)
 
     #Usa a escolha de estilo para a distribuicao de atributos
@@ -25,5 +25,6 @@ class Personagem:
         print(f"\n ==== Personagem: {self.nome} ==== ")
         print(f"==== Estilo de jogo: {self.estilo_dist} ==== ")
         print(self.raca)
+        print(self.classe)
         print(self.atributos)
         print("\n===============================")

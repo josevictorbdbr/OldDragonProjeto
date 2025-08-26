@@ -1,4 +1,4 @@
-from models.raca.RacaBase import Raca
+from models.racas.RacaBase import Raca
 
 class Anao(Raca):
     def __init__(self):

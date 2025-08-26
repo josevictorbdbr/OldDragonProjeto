@@ -1,10 +1,11 @@
-from models.raca.Humano import Humano
-from models.raca.Elfo import Elfo
-from models.raca.Anao import Anao
-from models.raca.Gnomo import Gnomo
-from models.raca.Halfling import Halfling
-from models.raca.MeioElfo import MeioElfo
+from models.racas.Humano import Humano
+from models.racas.Elfo import Elfo
+from models.racas.Anao import Anao
+from models.racas.Gnomo import Gnomo
+from models.racas.Halfling import Halfling
+from models.racas.MeioElfo import MeioElfo
 
+#função para escolher as habilidades de acordo com a raça escolhida
 def raca_escolha(escolha: str):
         if escolha == "1":
             return Humano()
@@ -19,5 +20,5 @@ def raca_escolha(escolha: str):
         elif escolha == "6":
             return MeioElfo()
         else:
-            print("Numero sem classe, escolhendo humano por padrão")
+            print("Numero sem raca definida, escolhendo humano por padrão")
             return Humano()
