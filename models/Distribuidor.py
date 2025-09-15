@@ -24,12 +24,7 @@ class DistribuidorAtributos:
         return self.escolha_personalizada(dados)
     
     #Usuario faz a escolha de onde colocar atributos caso seja estilo heroico ou aventureiro
-    def escolha_personalizada(self, dados):
-        escolha = input(
-            f"\nVocê tirou os dados: {dados}\n"
-            "Ordem: [FORÇA, DESTREZA, CONSTITUIÇÃO, INTELIGENCIA, SABEDORIA, CARISMA]\n"
-            "Digite um dos numeros tirados para cada atributo, separados por vírgula: "
-        )
+    def escolha_personalizada(self, dados, escolha):
         valores = [int(x.strip()) for x in escolha.split(",")]
         return valores
     

@@ -22,9 +22,11 @@ class Personagem:
             return Atributos(*valores)
     
     def exibir_ficha(self):
-        print(f"\n ==== Personagem: {self.nome} ==== ")
-        print(f"==== Estilo de jogo: {self.estilo_dist} ====\n")
-        print(self.raca)
-        print(self.classe)
-        print(self.atributos)
-        print("\n===============================")
+        return (
+            f"\n ==== Personagem: {self.nome} ==== \n"
+            f"==== Estilo de jogo: {self.estilo_dist} ====\n"
+            f"{self.raca}\n"
+            f"{self.classe}\n"
+            f"{self.atributos}\n"
+            "===============================\n"
+        )

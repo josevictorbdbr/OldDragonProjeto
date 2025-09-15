@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha do Personagem</title>
+</head>
+<body>
+    <h1>Ficha de {{ personagem.nome }}</h1>
+    <p><b>Estilo:</b> {{ personagem.estilo_dist }}</p>
+    <h2>Raça</h2>
+    <pre>{{ personagem.raca }}</pre>
+    <h2>Classe</h2>
+    <pre>{{ personagem.classe }}</pre>
+    <h2>Atributos</h2>
+    <pre>{{ personagem.atributos }}</pre>
+    <a href="{{ url_for('menu') }}">Voltar ao menu</a>
+</body>
+</html>
