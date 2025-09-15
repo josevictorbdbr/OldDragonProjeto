@@ -3,6 +3,7 @@ from models.Distribuidor import DistribuidorAtributos
 from models.racas import raca_escolha
 from models.classes import classe_escolha
 
+#Função para exibir o menu 
 def exibir_menu(nome, escolha_raca, escolha_classe, escolha_estilo):
     distribuidor = DistribuidorAtributos()
 

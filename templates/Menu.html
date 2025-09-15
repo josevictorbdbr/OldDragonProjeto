@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Criar Personagem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1>Crie seu personagem</h1>
     <form method="post">
-        <label>Nome: <input type="text" name="nome" required></label><br>
+        <label>Nome:
+            <input type="text" name="nome" required>
+        </label><br><br>
         <label>Raça:
             <select name="raca">
                 <option value="1">Humano</option>
@@ -17,21 +20,21 @@
                 <option value="5">Gnomo</option>
                 <option value="6">Meio-Elfo</option>
             </select>
-        </label><br>
+        </label><br><br>
         <label>Classe:
             <select name="classe">
                 <option value="1">Guerreiro</option>
                 <option value="2">Mago</option>
                 <option value="3">Ranger</option>
             </select>
-        </label><br>
+        </label><br><br>
         <label>Estilo:
             <select name="estilo">
-                <option value="classico">Clássico</option>
-                <option value="aventureiro">Aventureiro</option>
-                <option value="heroico">Heroico</option>
+                <option value="classico">Clássico (3d6 direto)</option>
+                <option value="aventureiro">Aventureiro (3d6, distribuir)</option>
+                <option value="heroico">Heroico (4d6 descarta menor, distribuir)</option>
             </select>
-        </label><br>
+        </label><br><br>
         <button type="submit">Criar Personagem</button>
     </form>
 </body>

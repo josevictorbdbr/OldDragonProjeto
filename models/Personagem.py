@@ -2,24 +2,30 @@ from models.Atributos import Atributos
 
 class Personagem:
     
-    def __init__(self, nome, estilo_dist, raca, classe, distribuidor):
+    def __init__(self, nome, estilo_dist, raca, classe, distribuidor, atributos=None):
         self.nome = nome
         self.estilo_dist = estilo_dist
         self.raca = raca
         self.classe = classe
-        self.atributos = self.definir_atributos(distribuidor)
 
-    #Usa a escolha de estilo para a distribuicao de atributos
+        if atributos is None:
+            self.atributos = self.definir_atributos(distribuidor)
+        else:
+            #Garante que atributos seja um objeto Atributos
+            if isinstance(atributos, Atributos):
+                self.atributos = atributos
+            else:
+                self.atributos = Atributos(*atributos)
+
+    # Define os atributos do personagem conforme o estilo de distribuição escolhido
     def definir_atributos(self, distribuidor):
         if self.estilo_dist == "classico":
             valores = distribuidor.dado_classico()
             return Atributos(*valores)
         elif self.estilo_dist == "aventureiro":
-            valores = distribuidor.escolha_aventureiro()
-            return Atributos(*valores)
+            return Atributos(*distribuidor.escolha_aventureiro())
         elif self.estilo_dist == "heroico":
-            valores = distribuidor.escolha_heroico()
-            return Atributos(*valores)
+            return Atributos(*distribuidor.escolha_heroico())
     
     def exibir_ficha(self):
         return (

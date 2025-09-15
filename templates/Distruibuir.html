@@ -2,19 +2,58 @@
 <html>
 <head>
     <title>Distribuir Atributos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h2>Distribua os valores nos atributos:</h2>
     <p>Valores rolados: {{ dados }}</p>
-    <form method="post">
-        <label>Força: <input type="number" name="forca" required></label><br>
-        <label>Destreza: <input type="number" name="destreza" required></label><br>
-        <label>Constituição: <input type="number" name="constituicao" required></label><br>
-        <label>Inteligência: <input type="number" name="inteligencia" required></label><br>
-        <label>Sabedoria: <input type="number" name="sabedoria" required></label><br>
-        <label>Carisma: <input type="number" name="carisma" required></label><br>
+    <form method="post" action="{{ url_for('distribuir') }}">
+        <label>Força:
+            <select name="forca" required>
+                {% for d in dados %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+            </select>
+        </label><br>
+        <label>Destreza:
+            <select name="destreza" required>
+                {% for d in dados %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+            </select>
+        </label><br>
+        <label>Constituição:
+            <select name="constituicao" required>
+                {% for d in dados %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+            </select>
+        </label><br>
+        <label>Inteligência:
+            <select name="inteligencia" required>
+                {% for d in dados %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+            </select>
+        </label><br>
+        <label>Sabedoria:
+            <select name="sabedoria" required>
+                {% for d in dados %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+            </select>
+        </label><br>
+        <label>Carisma:
+            <select name="carisma" required>
+                {% for d in dados %}<option value="{{ d }}">{{ d }}</option>{% endfor %}
+            </select>
+        </label><br>
         <button type="submit">Confirmar</button>
     </form>
-    <p>Distribua os valores rolados em cada atributo, cada valor deve ser usado uma única vez.</p>
+    <p>Distribua cada valor exatamente uma vez em cada atributo.</p>
+    <script>
+        //Garante que cada valor só possa ser escolhido uma vez
+        const selects = document.querySelectorAll("select");
+        selects.forEach(sel => {
+            sel.addEventListener("change", () => {
+                const escolhidos = Array.from(selects).map(s => s.value);
+                selects.forEach(s => {
+                    Array.from(s.options).forEach(opt => {
+                        opt.disabled = escolhidos.includes(opt.value) && s.value !== opt.value;
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
