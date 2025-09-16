@@ -1,0 +1,66 @@
+/* fundo */
+body {
+    background: #ede3c7;
+    color: #2a1b0d;
+    font-family: 'Georgia', serif;
+    padding: 20px;
+}
+
+/* titulo */
+h2 {
+    text-align: center;
+    font-size: 1.6em;
+    border-bottom: 2px solid #2a1b0d;
+    margin-bottom: 15px;
+}
+
+/* mostrar valores rolados */
+p {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* formulario */
+form {
+    background: #fff8e0;
+    border: 3px solid #2a1b0d;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 450px;
+    margin: auto;
+}
+
+/* campos */
+label {
+    display: block;
+    margin-bottom: 12px;
+}
+select, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 2px solid #2a1b0d;
+    border-radius: 6px;
+    background: #fdfaf1;
+}
+
+/* botao */
+button {
+    background: #7a3d1c;
+    color: #fff9e3;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #592c14;
+}
+
+/* texto abaixo do form */
+form + p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #3c2a17;
+}

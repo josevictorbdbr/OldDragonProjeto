@@ -1,6 +1,4 @@
-from views.MenuPrincipal import exibir_menu
+from controllers.App import app
 
-def main():
-    personagem = exibir_menu()   
-    personagem.exibir_ficha()      
-main()
+if __name__ == "__main__":
+    app.run(debug=True)

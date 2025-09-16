@@ -4,7 +4,12 @@ from models.Distribuidor import DistribuidorAtributos
 from models.racas import raca_escolha
 from models.classes import classe_escolha
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="../views/templates",
+    static_folder="../views/static"
+)
+
 app.secret_key = "segredo" 
 
 
