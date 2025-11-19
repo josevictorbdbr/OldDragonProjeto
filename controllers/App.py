@@ -4,6 +4,9 @@ from models.Distribuidor import DistribuidorAtributos
 from models.racas import raca_escolha
 from models.classes import classe_escolha
 
+# utilitário para salvar personagem em JSON
+from utils.salvar import save_personagem
+
 app = Flask(
     __name__,
     template_folder="../views/templates",
@@ -12,14 +15,13 @@ app = Flask(
 
 app.secret_key = "segredo" 
 
-
 @app.route("/", methods=["GET", "POST"])
 def menu():
     if request.method == "POST":
         nome = request.form["nome"]
         estilo = request.form["estilo"]
 
-        #Armazena os dados basicos do personagem na sessão
+        # Armazena dados básicos do personagem na sessão
         session["personagem_base"] = {
             "nome": nome,
             "raca_id": request.form["raca"],
@@ -33,6 +35,10 @@ def menu():
             raca = raca_escolha(session["personagem_base"]["raca_id"])
             classe = classe_escolha(session["personagem_base"]["classe_id"])
             personagem = Personagem(nome, estilo, raca, classe, distribuidor)
+
+            # Salva o personagem em saves/<nome_sanitizado>.json
+            save_personagem(personagem, path=f"saves/{personagem.nome}.json")
+
             return render_template("Ficha.html", personagem=personagem)
 
         elif estilo in ["aventureiro", "heroico"]:
@@ -49,11 +55,11 @@ def distribuir():
     dados = session.get("dados")
     personagem_base = session.get("personagem_base")
 
-    #Pega raça e classe escolhidas pelo usuario
+    # Pega raça e classe escolhidas pelo usuário
     raca = raca_escolha(personagem_base["raca_id"])
     classe = classe_escolha(personagem_base["classe_id"])
 
-    #Pega atributos escolhidos pelo usuario
+    # Pega atributos escolhidos pelo usuário
     escolha = request.form
     valores = distribuidor.escolha_personalizada(dados, escolha)
 
@@ -65,6 +71,9 @@ def distribuir():
         distribuidor,
         atributos=valores
     )
+
+    # Salva o personagem em saves/<nome_sanitizado>.json
+    save_personagem(personagem, path=f"saves/{personagem.nome}.json")
 
     return render_template("Ficha.html", personagem=personagem)
 
