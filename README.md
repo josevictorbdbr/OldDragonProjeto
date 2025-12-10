@@ -1,4 +1,4 @@
-# CRIAÇÃO DE UM PERSONAGEM BASEANDO-SE NAS REGRAS DO RPG OLD DRAGON
+# CRIAÇÃO DE UM PERSONAGEM DO RPG OLD DRAGON
 
 (Recomendado: Para iniciar o codigo digite "cmd" e "python Main.py" para funcionar caso o arquivo .venv não funcione)
 
