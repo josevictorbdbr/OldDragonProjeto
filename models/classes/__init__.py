@@ -1,6 +1,6 @@
-from models.classes.guerreiro import Guerreiro
-from models.classes.mago import Mago
-from models.classes.ranger import Ranger
+from models.classes.Guerreiro import Guerreiro
+from models.classes.Mago import Mago
+from models.classes.Ranger import Ranger
 
 #função para escolher as habilidades de acordo com a classe escolhida
 def classe_escolha(escolha: str):

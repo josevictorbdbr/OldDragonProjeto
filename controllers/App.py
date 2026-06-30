@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session
-from models.personagem import Personagem
-from models.distribuidor import DistribuidorAtributos
+from models.Personagem import Personagem
+from models.Distribuidor import DistribuidorAtributos
 from models.racas import raca_escolha
 from models.classes import classe_escolha
 
