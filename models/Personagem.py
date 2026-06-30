@@ -1,4 +1,4 @@
-from models.Atributos import Atributos
+from models.atributos import Atributos
 
 class Personagem:
     

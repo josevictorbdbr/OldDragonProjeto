@@ -1,4 +1,4 @@
-from models.racas.RacaBase import Raca
+from models.racas.raca_base import Raca
 
 class Humano(Raca):
     def __init__(self):

@@ -1,9 +1,9 @@
-from models.racas.RacaBase import Raca
+from models.racas.raca_base import Raca
 
 class MeioElfo(Raca):
     def __init__(self):
         super().__init__(
-            nome= "MeioElfo",
+            nome= "Meio Elfo",
             movimento= 9, 
             infravisao= 9, 
             alinhamento= "Caos",

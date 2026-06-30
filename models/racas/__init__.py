@@ -1,9 +1,9 @@
-from models.racas.Humano import Humano
-from models.racas.Elfo import Elfo
-from models.racas.Anao import Anao
-from models.racas.Gnomo import Gnomo
-from models.racas.Halfling import Halfling
-from models.racas.MeioElfo import MeioElfo
+from models.racas.humano import Humano
+from models.racas.elfo import Elfo
+from models.racas.anao import Anao
+from models.racas.gnomo import Gnomo
+from models.racas.halfling import Halfling
+from models.racas.meio_elfo import MeioElfo
 
 #função para escolher as habilidades de acordo com a raça escolhida
 def raca_escolha(escolha: str):

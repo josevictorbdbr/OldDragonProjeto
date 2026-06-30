@@ -1,4 +1,4 @@
-from models.classes.ClasseBase import Classe
+from models.classes.classe_base import Classe
 
 class Mago(Classe):
     def __init__(self):
